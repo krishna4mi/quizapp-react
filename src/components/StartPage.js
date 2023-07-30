@@ -12,8 +12,10 @@ const StartPage = () => {
         setShowStartButton(false);
     }
     const showQuestions = () => {
-        navigate('/quiz')
-        console.log(selectQuestionInput.current.value);
+        if(selectQuestionInput.current.value){
+            const questionsCount = selectQuestionInput.current.value;
+            navigate('/quiz?qtncount='+questionsCount);
+        }
     }
 
     const returnOptionsCount = () => {
@@ -27,13 +29,13 @@ const StartPage = () => {
 
     return (
         <div className="quiz-container">
-            {showStartButton && <button onClick={startQuiz}>Start</button>}
+            {showStartButton && <button className="next-buttons" onClick={startQuiz}>Let's Begain</button>}
             {!showStartButton && <div className='quiz-question-selection'>
-            Select no of questions to attend:
-                <select name="cars" id="cars" ref={selectQuestionInput}>
+                <p className='questions'>Select no of questions to attend</p>
+                <select className='cars' name="cars" id="cars" ref={selectQuestionInput}>
                     {returnOptionsCount()}
                 </select>
-                <button onClick={showQuestions}>Start</button>
+                <button className='start-button' onClick={showQuestions}>Start</button>
             </div>}
 
         </div>

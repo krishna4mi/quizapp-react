@@ -1,9 +1,70 @@
 .quiz-container {
-    max-width: 60%;
+    max-width: 50%;
     margin: 0 auto;
+    
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background: #fff;
+    background-image: url("https://evernever.com/wp-content/uploads/2021/07/Background-Type-III.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  .next-buttons {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    background-color: #050984;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin: 20px auto;
+    letter-spacing: 1px;
+  }
+  
+  .next-buttons:hover {
+    background-color: #1d9236;
+  }
+  .questions{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .quiz-question-selection{
+    display: grid;
+    color: white;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .cars{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .start-button{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #050984;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+  .start-button:hover {
+    background-color: #1d9236;
+  }
+  
